@@ -26,7 +26,7 @@
     MainViewController *mainVC=[MainViewController new];
     
     RootTableViewController *rootTableVC=[[RootTableViewController alloc] init];
-    rootTableVC.listItem=[NSArray arrayWithObjects:@"测试1",@"测试2",@"测试3",@"测试4",@"测试5",@"测试6",nil];
+    rootTableVC.listItem=[NSArray arrayWithObjects:@"测试1",@"测试2",@"测试3",@"测试4",@"测试5",@"测试6",@"测试7",nil];
     
     UISplitViewController *split=[[UISplitViewController alloc] init];
     split.viewControllers=[NSArray arrayWithObjects:rootTableVC,[[UINavigationController alloc] initWithRootViewController:mainVC], nil];
