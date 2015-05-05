@@ -20,6 +20,12 @@
 {
     [self drawTable];
     
+    //绘制图片
+    int width = self.pickedImage.size.width;
+    int height = self.pickedImage.size.height;
+    CGRect rectForImage = CGRectMake(0,0, width, height);
+    [self.pickedImage drawInRect:rectForImage];
+    
     if (self.arrayStrokes)
     {
         int arraynum = 0;
