@@ -10,7 +10,6 @@
 
 @interface SignUIView : UIView
 
-@property(nonatomic,strong) UIImage *pickedImage;
 @property(nonatomic,retain) NSMutableArray *arrayStrokes;
 @property(nonatomic,retain) UIColor *currentColor;
 @property(nonatomic,assign) CGFloat currentSize;

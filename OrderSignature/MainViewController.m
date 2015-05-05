@@ -34,7 +34,6 @@
     self.sign.backgroundColor=[UIColor whiteColor];
     self.sign.currentSize=3.0;
     self.sign.currentColor=[UIColor blackColor];
-    //    self.sign.pickedImage=[UIImage imageNamed:@"Default"];
     self.sign.arrayStrokes=[[NSMutableArray alloc] init];
     
     self.view=self.sign;    
