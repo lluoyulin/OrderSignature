@@ -27,25 +27,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor=[UIColor redColor];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveDraw:)];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(clearDraw:)];
     
-    self.label=[[UILabel alloc] init];
-    self.label.frame=CGRectMake(200, 200, 200, 200);
-    self.label.text=@"默认值";
-    self.label.font=[UIFont systemFontOfSize:20];
-    [self.view addSubview:self.label];
+    self.sign=[[SignUIView alloc] init];
+    self.sign.backgroundColor=[UIColor whiteColor];
+    self.sign.currentSize=3.0;
+    self.sign.currentColor=[UIColor blackColor];
+    //    self.sign.pickedImage=[UIImage imageNamed:@"Default"];
+    self.sign.arrayStrokes=[[NSMutableArray alloc] init];
     
-//    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveDraw:)];
-//    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(clearDraw:)];
-//    
-//    self.sign=[[SignUIView alloc] init];
-//    self.sign.backgroundColor=[UIColor whiteColor];
-//    self.sign.currentSize=3.0;
-//    self.sign.currentColor=[UIColor blackColor];
-//    //    self.sign.pickedImage=[UIImage imageNamed:@"Default"];
-//    self.sign.arrayStrokes=[[NSMutableArray alloc] init];
-//    
-//    self.view=self.sign;    
+    self.view=self.sign;    
 }
 
 /**

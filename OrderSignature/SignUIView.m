@@ -19,6 +19,7 @@
 - (void) drawRect: (CGRect) rect
 {
     [self drawTable];
+    
     //绘制图片
     int width = self.pickedImage.size.width;
     int height = self.pickedImage.size.height;

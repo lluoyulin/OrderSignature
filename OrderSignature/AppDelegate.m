@@ -29,14 +29,10 @@
     rootTableVC.listItem=[NSArray arrayWithObjects:@"测试1",@"测试2",@"测试3",@"测试4",@"测试5",@"测试6",nil];
     
     UISplitViewController *split=[[UISplitViewController alloc] init];
-    split.viewControllers=[NSArray arrayWithObjects:rootTableVC,mainVC, nil];
+    split.viewControllers=[NSArray arrayWithObjects:rootTableVC,[[UINavigationController alloc] initWithRootViewController:mainVC], nil];
     split.delegate=mainVC;
     
     self.window.rootViewController=split;
-    
-//    MainViewController *mainVC=[MainViewController new];
-//    mainVC.title=@"首页";
-//    self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:mainVC];
     
     return YES;
 }
