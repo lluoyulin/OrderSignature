@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootTableViewController : UITableViewController
+@protocol RootTableViewControllerDelegate <NSObject>
+
+-(void)didSelectRowWithIndew:(NSInteger) rowIndex;
+
+@end
+
+@interface RootTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,retain) NSArray *listItem;
+
+@property(nonatomic,weak) id<RootTableViewControllerDelegate> delegate;
 
 @end

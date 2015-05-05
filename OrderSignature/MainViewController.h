@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootTableViewController.h"
 
-@interface MainViewController : UIViewController<UIPopoverControllerDelegate,UISplitViewControllerDelegate>
+@interface MainViewController : UIViewController<UIPopoverControllerDelegate,UISplitViewControllerDelegate,RootTableViewControllerDelegate>
 
 @end

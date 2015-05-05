@@ -14,6 +14,4 @@
 @property(nonatomic,retain) UIColor *currentColor;
 @property(nonatomic,assign) CGFloat currentSize;
 
--(void)drawTable;
-
 @end

@@ -26,11 +26,13 @@
     MainViewController *mainVC=[MainViewController new];
     
     RootTableViewController *rootTableVC=[[RootTableViewController alloc] init];
-    rootTableVC.listItem=[NSArray arrayWithObjects:@"测试1",@"测试2",@"测试3",@"测试4",@"测试5",@"测试6",@"测试7",nil];
+    rootTableVC.listItem=[NSArray arrayWithObjects:@"退房",@"换房",@"入住",nil];
+    rootTableVC.delegate=mainVC;
     
     UISplitViewController *split=[[UISplitViewController alloc] init];
     split.viewControllers=[NSArray arrayWithObjects:rootTableVC,[[UINavigationController alloc] initWithRootViewController:mainVC], nil];
     split.delegate=mainVC;
+    split.maximumPrimaryColumnWidth=200;
     
     self.window.rootViewController=split;
     

@@ -9,7 +9,9 @@
 #import "RootTableViewController.h"
 
 @interface RootTableViewController ()
-
+{
+    UITableView *_tableView;
+}
 @end
 
 @implementation RootTableViewController
@@ -17,7 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.clearsSelectionOnViewWillAppear = NO;
+    self.view.backgroundColor=[UIColor whiteColor];
+
+    _tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 20, 200,self.view.frame.size.height)];
+    _tableView.dataSource=self;
+    _tableView.delegate=self;
+    [self.view addSubview:_tableView];
+    
+    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];//默认选中第一行
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +58,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self.delegate didSelectRowWithIndew:indexPath.row];
 }
 
 @end
